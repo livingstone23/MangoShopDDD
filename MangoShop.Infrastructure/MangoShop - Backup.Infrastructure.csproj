@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Aggregates\" />
-    <Folder Include="ValueObjects\" />
+    <Folder Include="NewFolder\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+    <Folder Include="Persistence\" />
   </ItemGroup>
 
 </Project>

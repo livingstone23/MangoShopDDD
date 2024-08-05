@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoShop.Api", "MangoShop.Api\MangoShop.Api.csproj", "{08B3696E-93E2-47B4-AD84-2BF1629856B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoShop.Api", "MangoShop.Api\MangoShop.Api.csproj", "{08B3696E-93E2-47B4-AD84-2BF1629856B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoShop.Application", "MangoShop.Application\MangoShop.Application.csproj", "{F8139460-6BF7-4D72-BEEF-A322990CA685}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoShop.Domain", "MangoShop.Domain\MangoShop.Domain.csproj", "{2BFAD4B6-BEB3-47AD-AB8B-D37591E8B263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoShop.Domain", "MangoShop.Domain\MangoShop.Domain.csproj", "{2BFAD4B6-BEB3-47AD-AB8B-D37591E8B263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoShop.Infrastructure", "MangoShop.Infrastructure\MangoShop.Infrastructure.csproj", "{042FE436-CC37-4B73-9E0C-2D7080E611BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoShop.Infrastructure", "MangoShop.Infrastructure\MangoShop.Infrastructure.csproj", "{042FE436-CC37-4B73-9E0C-2D7080E611BB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoShop.Tests", "MangoShop.Tests\MangoShop.Tests.csproj", "{2F348902-6D13-4938-8729-0772DB43E889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoShop.Tests", "MangoShop.Tests\MangoShop.Tests.csproj", "{2F348902-6D13-4938-8729-0772DB43E889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{08B3696E-93E2-47B4-AD84-2BF1629856B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08B3696E-93E2-47B4-AD84-2BF1629856B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08B3696E-93E2-47B4-AD84-2BF1629856B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8139460-6BF7-4D72-BEEF-A322990CA685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8139460-6BF7-4D72-BEEF-A322990CA685}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8139460-6BF7-4D72-BEEF-A322990CA685}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8139460-6BF7-4D72-BEEF-A322990CA685}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2BFAD4B6-BEB3-47AD-AB8B-D37591E8B263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BFAD4B6-BEB3-47AD-AB8B-D37591E8B263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BFAD4B6-BEB3-47AD-AB8B-D37591E8B263}.Release|Any CPU.ActiveCfg = Release|Any CPU
