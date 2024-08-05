@@ -1,10 +1,17 @@
-﻿namespace MangoShop.Infrastructure.Repositories;
+﻿using MangoShop.Domain.Entities;
+using MangoShop.Domain.Repositories;
+using MangoShop.Infrastructure.Configuration;
 
-public class WhatsappMessageRepository : IWhatsappMessageRepository
+namespace MangoShop.Infrastructure.Repositories;
+
+public class WhatsappMessageRepository : IWhatsAppMessageRepository
 {
-    private readonly YourDbContext _context;
 
-    public WhatsappMessageRepository(YourDbContext context)
+
+    private readonly ApplicationDbContext _context;
+
+
+    public WhatsappMessageRepository(ApplicationDbContext context)
     {
         _context = context;
     }
@@ -16,7 +23,23 @@ public class WhatsappMessageRepository : IWhatsappMessageRepository
 
     public async Task AddAsync(WhatsAppMessage message)
     {
-        _context.WhatsAppMessages.Add(message);
+        await _context.WhatsAppMessages.AddAsync(message);
         await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(WhatsAppMessage message)
+    {
+        _context.WhatsAppMessages.Update(message);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Guid id)
+    {
+        var message = await _context.WhatsAppMessages.FindAsync(id);
+        if (message != null)
+        {
+            _context.WhatsAppMessages.Remove(message);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MangoShop.Domain.Entities;
 using MangoShop.Domain.Repositories;
+using MangoShop.Infrastructure.Configuration;
 
 
 

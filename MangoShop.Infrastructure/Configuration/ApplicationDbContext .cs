@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 
-namespace MangoShop.Infrastructure;
+namespace MangoShop.Infrastructure.Configuration;
 
 
 

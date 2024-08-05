@@ -7,9 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventHandlers\" />
-    <Folder Include="Services\" />
-    <Folder Include="Persistence\" />
+    <Compile Remove="Persistence\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Persistence\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Persistence\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EventHandlers\Client\" />
+    <Folder Include="EventHandlers\WhatsAppMessage\" />
+    <Folder Include="EventHandlers\Product\" />
   </ItemGroup>
 
 	<ItemGroup>

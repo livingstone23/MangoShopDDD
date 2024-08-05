@@ -1,6 +1,8 @@
-﻿namespace MangoShop.Api.Queries.WhatsappMessage;
+﻿using MediatR;
 
-public class GetWhatsappMessageByIdQuery
+namespace MangoShop.Api.Queries.WhatsappMessage;
+
+public class GetWhatsappMessageByIdQuery : IRequest<WhatsAppMessageDto>
 {
-    
+    public Guid Id { get; set; }
 }
