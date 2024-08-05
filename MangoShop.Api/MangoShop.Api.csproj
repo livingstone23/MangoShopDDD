@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MangoShop.Domain\MangoShop.Domain.csproj" />
+    <ProjectReference Include="..\MangoShop.Infrastructure\MangoShop.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
