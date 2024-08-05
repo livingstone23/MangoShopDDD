@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using MangoShop.Api.DTOs;
+using MediatR;
 
 namespace MangoShop.Api.Queries.WhatsappMessage;
 

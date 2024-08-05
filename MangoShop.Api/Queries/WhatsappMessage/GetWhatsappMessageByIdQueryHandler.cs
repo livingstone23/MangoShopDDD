@@ -1,12 +1,14 @@
-﻿using MediatR;
+﻿using MangoShop.Api.DTOs;
+using MangoShop.Domain.Repositories;
+using MediatR;
 
 namespace MangoShop.Api.Queries.WhatsappMessage;
 
 public class GetWhatsappMessageByIdQueryHandler : IRequestHandler<GetWhatsappMessageByIdQuery, WhatsAppMessageDto>
 {
-    private readonly IWhatsappMessageRepository _repository;
+    private readonly IWhatsAppMessageRepository _repository;
 
-    public GetWhatsappMessageByIdQueryHandler(IWhatsappMessageRepository repository)
+    public GetWhatsappMessageByIdQueryHandler(IWhatsAppMessageRepository repository)
     {
         _repository = repository;
     }

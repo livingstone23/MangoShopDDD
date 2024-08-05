@@ -15,9 +15,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Queries\Client\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MangoShop.Domain\MangoShop.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,16 @@
-﻿using MediatR;
+﻿using MangoShop.Domain.Entities;
+using MangoShop.Domain.Repositories;
+using MediatR;
 
 namespace MangoShop.Api.Commands.WhatsappMessage;
 
-public class CreateWhatsappMessageCommandHandler : IRequestHandler<CreateWhatsappMessageCommand, Guid>
-{
-    private readonly IWhatsappMessageRepository _repository;
+public class CreateWhatsAppMessageCommandHandler : IRequestHandler<CreateWhatsappMessageCommand, Guid>
+{                                                                  
+    private readonly IWhatsAppMessageRepository _whatsAppMessageRepository;
 
-    public CreateWhatsappMessageCommandHandler(IWhatsappMessageRepository repository)
+    public CreateWhatsAppMessageCommandHandler(IWhatsAppMessageRepository whatsAppMessageRepository)
     {
-        _repository = repository;
+        _whatsAppMessageRepository = whatsAppMessageRepository;
     }
 
     public async Task<Guid> Handle(CreateWhatsappMessageCommand request, CancellationToken cancellationToken)
@@ -19,13 +21,12 @@ public class CreateWhatsappMessageCommandHandler : IRequestHandler<CreateWhatsap
             PhoneTo = request.PhoneTo,
             TemplanteNameUsed = request.TemplanteNameUsed,
             MessageBody = request.MessageBody,
-            MessageId = request.MessageId,
             PhoneFrom = request.PhoneFrom,
             PhoneId = request.PhoneId,
-            Created = DateTime.UtcNow,
-            CreatedBy = "system"
+            Created = DateTime.UtcNow
         };
-        await _repository.AddAsync(message);
+
+        await _whatsAppMessageRepository.AddAsync(message);
         return message.Oui;
     }
 }
