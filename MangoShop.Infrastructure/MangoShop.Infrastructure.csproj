@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="EventHandlers\" />
-    <Folder Include="Repositories\WhatsappMessage\" />
     <Folder Include="Services\" />
     <Folder Include="Persistence\" />
   </ItemGroup>

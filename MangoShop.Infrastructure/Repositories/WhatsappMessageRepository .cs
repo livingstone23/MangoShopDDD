@@ -1,4 +1,4 @@
-﻿namespace MangoShop.Infrastructure.Repositories.WhatsappMessage;
+﻿namespace MangoShop.Infrastructure.Repositories;
 
 public class WhatsappMessageRepository : IWhatsappMessageRepository
 {

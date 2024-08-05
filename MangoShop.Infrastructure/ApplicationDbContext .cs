@@ -23,47 +23,26 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Client>(entity =>
         {
             entity.HasKey(e => e.Id);
-
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Email)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Created)
-                .IsRequired(false);
-            entity.Property(e => e.CreatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.Updated)
-                .IsRequired(false);
-            entity.Property(e => e.UpdatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.GcRecord)
-                .IsRequired(false);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Email).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Created).IsRequired(false);
+            entity.Property(e => e.CreatedBy).HasMaxLength(100);
+            entity.Property(e => e.Updated).IsRequired(false);
+            entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            entity.Property(e => e.GcRecord).IsRequired(false);
         });
 
-        // Configuración de la entidad Product
         modelBuilder.Entity<Product>(entity =>
         {
             entity.HasKey(e => e.Id);
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Description)
-                .IsRequired()
-                .HasMaxLength(200);
-            entity.Property(e => e.Price)
-                .IsRequired();
-            entity.Property(e => e.Created)
-                .IsRequired(false);
-            entity.Property(e => e.CreatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.Updated)
-                .IsRequired(false);
-            entity.Property(e => e.UpdatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.GcRecord)
-                .IsRequired(false);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.Description).IsRequired().HasMaxLength(200);
+            entity.Property(e => e.Price).IsRequired();
+            entity.Property(e => e.Created).IsRequired(false);
+            entity.Property(e => e.CreatedBy).HasMaxLength(100);
+            entity.Property(e => e.Updated).IsRequired(false);
+            entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            entity.Property(e => e.GcRecord).IsRequired(false);
         });
 
         // Configuración de la entidad WhatsAppMessage
@@ -71,54 +50,28 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasKey(e => e.Id);
 
-            entity.Property(e => e.PhoneTo)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.TemplanteNameUsed)
-                .IsRequired()
-                .HasMaxLength(200);
-            entity.Property(e => e.MessageBody)
-                .HasMaxLength(3000);
-            entity.Property(e => e.MessageId)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.PhoneFrom)
-                .IsRequired()
-                .HasMaxLength(20);
-            entity.Property(e => e.PhoneId)
-                .HasMaxLength(50);
-            entity.Property(e => e.SendingAt)
-                .IsRequired(false);
-            entity.Property(e => e.SendingDate)
-                .IsRequired(false);
-            entity.Property(e => e.DeliveredAt)
-                .IsRequired(false);
-            entity.Property(e => e.DeliveredDateConfirm)
-                .IsRequired(false);
-            entity.Property(e => e.DeliveredDateRegister)
-                .IsRequired(false);
-            entity.Property(e => e.ReadedAt)
-                .IsRequired(false);
-            entity.Property(e => e.ReadedDate)
-                .IsRequired(false);
-            entity.Property(e => e.ReadedDateRegister)
-                .IsRequired(false);
-            entity.Property(e => e.FailedAt)
-                .IsRequired(false);
-            entity.Property(e => e.FailedDate)
-                .IsRequired(false);
-            entity.Property(e => e.FailedDateRegister)
-                .IsRequired(false);
-            entity.Property(e => e.Created)
-                .IsRequired(false);
-            entity.Property(e => e.CreatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.Updated)
-                .IsRequired(false);
-            entity.Property(e => e.UpdatedBy)
-                .HasMaxLength(100);
-            entity.Property(e => e.GcRecord)
-                .IsRequired(false);
+            entity.Property(e => e.PhoneTo).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.TemplanteNameUsed).IsRequired().HasMaxLength(200);
+            entity.Property(e => e.MessageBody).HasMaxLength(3000);
+            entity.Property(e => e.MessageId).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.PhoneFrom).IsRequired().HasMaxLength(20);
+            entity.Property(e => e.PhoneId).HasMaxLength(50);
+            entity.Property(e => e.SendingAt).IsRequired(false);
+            entity.Property(e => e.SendingDate).IsRequired(false);
+            entity.Property(e => e.DeliveredAt).IsRequired(false);
+            entity.Property(e => e.DeliveredDateConfirm).IsRequired(false);
+            entity.Property(e => e.DeliveredDateRegister).IsRequired(false);
+            entity.Property(e => e.ReadedAt).IsRequired(false);
+            entity.Property(e => e.ReadedDate).IsRequired(false);
+            entity.Property(e => e.ReadedDateRegister).IsRequired(false);
+            entity.Property(e => e.FailedAt).IsRequired(false);
+            entity.Property(e => e.FailedDate).IsRequired(false);
+            entity.Property(e => e.FailedDateRegister).IsRequired(false);
+            entity.Property(e => e.Created).IsRequired(false);
+            entity.Property(e => e.CreatedBy).HasMaxLength(100);
+            entity.Property(e => e.Updated).IsRequired(false);
+            entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            entity.Property(e => e.GcRecord).IsRequired(false);
         });
     }
 }
