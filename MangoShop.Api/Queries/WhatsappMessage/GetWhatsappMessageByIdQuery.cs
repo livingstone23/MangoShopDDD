@@ -5,5 +5,5 @@ namespace MangoShop.Api.Queries.WhatsappMessage;
 
 public class GetWhatsappMessageByIdQuery : IRequest<WhatsAppMessageDto>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

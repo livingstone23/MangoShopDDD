@@ -21,10 +21,10 @@ public class UpdateWhatsAppMessageCommandHandler : IRequestHandler<UpdateWhatsAp
     public async Task<Unit> Handle(UpdateWhatsAppMessageCommand request, CancellationToken cancellationToken)
     {
 
-        var message = await _whatsAppMessageRepository.GetByIdAsync(request.Oui);
+        var message = await _whatsAppMessageRepository.GetByIdAsync(request.Id);
         if (message == null)
         {
-            throw new NotFoundException(nameof(WhatsAppMessage), request.Oui);
+            throw new NotFoundException(nameof(WhatsAppMessage), request);
         }
         
         message.SendingAt = request.SendingAt;

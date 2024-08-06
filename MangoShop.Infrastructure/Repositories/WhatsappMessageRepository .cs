@@ -16,7 +16,7 @@ public class WhatsappMessageRepository : IWhatsAppMessageRepository
         _context = context;
     }
 
-    public async Task<WhatsAppMessage> GetByIdAsync(Guid id)
+    public async Task<WhatsAppMessage> GetByIdAsync(int id)
     {
         return await _context.WhatsAppMessages.FindAsync(id);
     }
@@ -33,7 +33,7 @@ public class WhatsappMessageRepository : IWhatsAppMessageRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(int id)
     {
         var message = await _context.WhatsAppMessages.FindAsync(id);
         if (message != null)

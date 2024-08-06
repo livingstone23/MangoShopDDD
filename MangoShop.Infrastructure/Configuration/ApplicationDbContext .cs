@@ -48,6 +48,7 @@ public class ApplicationDbContext : DbContext
         // Configuración de la entidad WhatsAppMessage
         modelBuilder.Entity<WhatsAppMessage>(entity =>
         {
+            entity.ToTable("WhatsAppMessages2", "dbo");
             entity.HasKey(e => e.Id);
 
             entity.Property(e => e.PhoneTo).IsRequired().HasMaxLength(50);

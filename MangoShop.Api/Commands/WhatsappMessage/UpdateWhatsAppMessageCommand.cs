@@ -4,6 +4,7 @@ namespace MangoShop.Api.Commands.WhatsappMessage;
 
 public class UpdateWhatsAppMessageCommand : IRequest<Unit>
 {
+    public int Id { get; set; }
     public Guid Oui { get; set; }
     public bool SendingAt { get; set; }
     public DateTime? SendingDate { get; set; }

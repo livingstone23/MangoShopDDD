@@ -29,7 +29,7 @@ public class WhatsAppMessagesController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(Guid id)
+    public async Task<IActionResult> GetById(int id)
     {
         var message = await _mediator.Send(new GetWhatsappMessageByIdQuery { Id = id });
         if (message == null)
