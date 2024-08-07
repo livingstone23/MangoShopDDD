@@ -1,6 +1,7 @@
 ﻿using MangoShop.Domain.Entities;
 using MangoShop.Domain.Repositories;
 using MangoShop.Infrastructure.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace MangoShop.Infrastructure.Repositories;
 
@@ -14,6 +15,13 @@ public class WhatsappMessageRepository : IWhatsAppMessageRepository
     public WhatsappMessageRepository(ApplicationDbContext context)
     {
         _context = context;
+    }
+
+    public async Task<List<WhatsAppMessage>> GetAllAsync()
+    {
+
+        return await _context.WhatsAppMessages.ToListAsync();
+
     }
 
     public async Task<WhatsAppMessage> GetByIdAsync(int id)
@@ -41,5 +49,20 @@ public class WhatsappMessageRepository : IWhatsAppMessageRepository
             _context.WhatsAppMessages.Remove(message);
             await _context.SaveChangesAsync();
         }
+    }
+
+    public  async Task<bool> SendMessage(WhatsAppMessage message)
+    {
+
+        if (string.IsNullOrEmpty(message.PhoneFrom) || string.IsNullOrEmpty(message.PhoneId))
+        {
+            return false;
+        }
+        // Simulación de envío de mensaje con una espera asincrónica
+        await Task.Delay(1000); // Simula una ope
+
+        // Simulación de envío de mensaje
+        return true;
+
     }
 }
